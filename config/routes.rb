@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-  get 'users/show'
+  resources :users, only: [:show] do
+    resources :item, only: [:create]
+  end
 
   get 'welcome/index'
 
