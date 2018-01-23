@@ -1,7 +1,7 @@
 <h1>Tasks</h1>
 
-<div class="container">
-    <div class="row">
-        <%= current_user.email =%>        
-    </div>
-</div>
+User: <%= current_user.email =%>
+
+<%= render partial: 'items/item' %>
+
+<%= render partial: 'items/form' %>

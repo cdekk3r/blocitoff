@@ -3,8 +3,7 @@ class UsersController < ApplicationController
   
   def show
     @user = current_user
-    @item = Item.find(params[:id])
-    @item.user = current_user
+    @items = @user.items(current_user)
   end
   
 end
