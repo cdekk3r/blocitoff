@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @items = @user.items(current_user)
+    @item = Item.new
   end
   
 end

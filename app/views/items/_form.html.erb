@@ -1,8 +1,7 @@
 <div class="form-group">
-    <%= form_for :item do |t| %>
+    <%= form_for [@user, @item] do |t| %>
         <%= t.text_field :name, placeholder: "Add new item" %>
         <%= t.submit "Add", class: "btn btn-success" %>
     <% end %>        
 </div>
-
 
