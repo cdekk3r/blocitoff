@@ -2,7 +2,8 @@
     <% @user.items.each do |item| %>
         <ul>
             <li>
-                <%= item.name %> - <%= link_to "", user_item_url(@item, @user), method: :delete, class: 'glyphicon glyphicon-ok' %>
+                <%= item.name %>
+                <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok' %>
             </li>
         </ul>    
     <% end %>

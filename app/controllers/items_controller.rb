@@ -16,14 +16,14 @@ class ItemsController < ApplicationController
   end
   
   def destroy
-    @item = current_user.items.find(item_params)
+    @item = current_user.items.find(params[:id])
     
     if @item.destroy
-      flash[:notice] = "\"#{@item.title}\" was completed."
-      redirect_to [@user]
+      flash[:notice] = "\"#{@item.name}\" has been completed."
+      redirect_to root_path
     else
       flash.now[:alert] = "There was an error completing this item."
-      redirect_to [@user]
+      redirect_to root_path
     end
     
   end
