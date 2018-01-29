@@ -4,6 +4,9 @@
             <li>
                 <%= item.name %>
                 <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok' %>
+                <small>
+                    <%= distance_of_time_in_words(Time.now, item.created_at.to_date + 7 ) %>
+                </small>
             </li>
         </ul>    
     <% end %>
