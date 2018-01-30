@@ -3,10 +3,12 @@
         <ul>
             <li>
                 <%= item.name %>
-                <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok' %>
-                <small>
-                    <%= distance_of_time_in_words(Time.now, item.created_at.to_date + 7 ) %>
-                </small>
+                <div class="push-right">
+                    <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok' %>    
+                    <small>
+                        <%= distance_of_time_in_words(Time.now, item.created_at.to_date + 7 ) %> to complete
+                    </small>
+                </div>
             </li>
         </ul>    
     <% end %>
